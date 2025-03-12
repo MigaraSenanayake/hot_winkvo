@@ -1,0 +1,20 @@
+.validation-message {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+
+    color: red; /* You can style it as per your design */
+}
+
+.text-danger {
+    color: red;
+    font-weight: bold;
+}
+
+.text-success {
+    color: green;
+    font-weight: bold;
+}
+
+
+    

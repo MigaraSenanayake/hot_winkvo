@@ -1,0 +1,38 @@
+.success-btn {
+    background-color: white; /* Background color */
+    color: green; /* Text color */
+    border: 5px solid green; /* Outline color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.success-btn:hover {
+    background-color: green; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    text-align: center; /* Center text in table cells */
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+.table th,
+.table td {
+    text-align: center; /* Ensure table headers and data are centered */
+    vertical-align: middle; /* Center vertically */
+}
+
+
+.qtyInput{
+    width: 50px !important;
+    padding: 6px 3px;
+    text-align: center;
+    border: 1px solid #cfb1b1;
+    outline: 0;
+    margin-right: 1px;
+}

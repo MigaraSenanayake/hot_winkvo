@@ -1,0 +1,25 @@
+.select2-container .select2-selection--single {
+    height: 36px !important; /* Match height with input fields */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center content vertically */
+ }
+ .select2-container--default .select2-selection--single .select2-selection--rendered {
+    line-height: normal !important; /* Reset line height for text */
+    padding: 0 8px !important; /* Add padding for text spacing */
+    font-size: 16px; /* Adjust font size */
+    color: #212529; /* Match text color with Bootstrap inputs */
+ }
+ .select2-container--default .select2-selection--single .select2-selection--arrow {
+    height: 100% !important; /* Stretch arrow container height */
+    width: 36px; /* Make arrow container square */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center arrow */
+    align-items: center; /* Vertically center arrow */
+    background-color: #f8f9fa; /* Optional: Match Bootstrap background color */
+    border-left: 1px solid #ced4da; /* Optional: Add border to match input style */
+    border-radius: 0 0.25rem 0.25rem 0; /* Match Bootstrap's rounded corners */
+ }
+ .select2-container--default .select2-selection--single .select2-selection--arrow b {
+    border-color: #6c757d transparent transparent transparent; /* Set arrow color */
+    border-width: 7px 5px 0 6px; /* Arrow size */  
+ }
