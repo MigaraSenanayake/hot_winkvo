@@ -173,6 +173,10 @@ if (isset($_POST['submitOrder'])) {
             // Remove the temporary file after printing
             unlink($file);
 
+            // Clear the cart after successful submission and printing
+            unset($_SESSION['order_items']);
+            unset($_SESSION['order_itemIds']);
+
             // Redirect back to the order page after printing
             redirect("create_order2.php", "Order submitted and KOT printed!");
 

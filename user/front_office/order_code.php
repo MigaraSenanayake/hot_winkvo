@@ -166,11 +166,15 @@ if (isset($_POST['submitOrder'])) {
             file_put_contents($file, $kotData . $cutCommand); // Append the cut command to the KOT data
 
             // Send the print job using shell_exec
-            $printerName = "POS_CV2";  // Change this to your actual printer name
+            $printerName = "POS_CV2";  // Actual printer name
             shell_exec("print /D:\"\\\\127.0.0.1\\$printerName\" " . escapeshellarg($file));
 
             // Remove the temporary file after printing
             unlink($file);
+
+            // Clear the cart after successful submission and printing
+            unset($_SESSION['order_items']);
+            unset($_SESSION['order_itemIds']);
 
             // Redirect back to the order page after printing
             redirect("create_order.php", "Order submitted and KOT printed!");

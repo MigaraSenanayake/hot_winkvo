@@ -3,9 +3,7 @@
 <div class="container-fluid px-3">
     <div class="card mt-2 shadow-sm">
         <div class="card-header">
-            <h4 class="mb-0">Room Packages
-                <a href="room_create.php" class="btn btn-outline-success float-end">Add Packages</a>
-            </h4>
+            <h4 class="mb-0">Room Packages</h4>
         </div>
         <div class="card-body px-3 mt-3"> <!-- Corrected class name -->
             <?php alertMessage(); ?>

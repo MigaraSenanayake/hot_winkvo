@@ -54,7 +54,7 @@ $current_page = strtolower(basename($_SERVER['PHP_SELF']));
                         Walk-In Payments
                     </a> 
 
-                    <br><br><br><br><hr>
+                    <br><br><br><hr>
 
                     <!-- Logout Link -->
                     <div class="logout">

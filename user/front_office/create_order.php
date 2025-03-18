@@ -135,6 +135,7 @@
                         </tbody>
                     </table>
                 </div>
+                
 
                 <?php
             }
@@ -145,52 +146,7 @@
 
         ?>
         
-        <div class="col mt-3 mb-3 text-end">
-        <button onclick="clearCart()" type="button" class="btn btn-danger">Clear Cart</button>
-            <script>
-                function clearCart() {
-                    Swal.fire({
-                        title: 'Are you sure?',
-                        text: "You won't be able to revert this!",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#d33',
-                        cancelButtonColor: '#3085d6',
-                        confirmButtonText: 'Yes, clear it!',
-                        cancelButtonText: 'Cancel'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            fetch("clear_cart.php")
-                                .then(response => response.json())
-                                .then(data => {
-                                    if (data.success) {
-                                        Swal.fire(
-                                            'Cleared!',
-                                            'Your cart has been cleared.',
-                                            'success'
-                                        ).then(() => {
-                                            location.reload(); // Reload the page to update the cart display
-                                        });
-                                    } else {
-                                        Swal.fire(
-                                            'Error!',
-                                            'Failed to clear the cart: ' + data.message,
-                                            'error'
-                                        );
-                                    }
-                                })
-                                .catch(error => {
-                                    Swal.fire(
-                                        'Error!',
-                                        'Error clearing the cart: ' + error.message,
-                                        'error'
-                                    );
-                                });
-                        }
-                    });
-                }
-            </script>
-        </div>
+
 
         <form action="order_code.php" method="POST">
            <div class="row">
